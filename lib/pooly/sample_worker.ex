@@ -7,5 +7,5 @@ defmodule Pooly.SampleWorker do
 
   def init(_), do: {:ok, %{}}
 
-  def handle_call(:stop, _from, state), do: {:stop, :normal, :ok, state}
+  def handle_info(:stop, state), do: {:stop, :normal, state}
 end
